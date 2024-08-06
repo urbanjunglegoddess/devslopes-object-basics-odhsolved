@@ -1,4 +1,4 @@
-export const pizzaPlaces = {
+const pizzaPlacesObject = {
   "Domino's": {
     cuisines: ["italian", "new york", "pizza"],
     pizzaToppings: {
@@ -80,3 +80,5 @@ export const pizzaPlaces = {
     acceptsReservations: false,
   },
 };
+
+module.exports = pizzaPlacesObject;
