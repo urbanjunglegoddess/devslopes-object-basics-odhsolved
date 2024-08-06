@@ -1,7 +1,6 @@
-export const pizzaPlaces = [
-  {
-    name: "Domino's",
-    cuisines: ["italian", "american", "pizza"],
+export const pizzaPlaces = {
+  "Domino's": {
+    cuisines: ["italian", "new york", "pizza"],
     pizzaToppings: {
       pepperoni: 2.2,
       mushrooms: 0.7,
@@ -16,8 +15,7 @@ export const pizzaPlaces = [
     zipcode: 54321,
     acceptsReservations: true,
   },
-  {
-    name: "Little Caesars",
+  "Little Caesars": {
     cuisines: ["italian", "american", "pizza"],
     pizzaToppings: {
       pepperoni: 1.8,
@@ -33,8 +31,7 @@ export const pizzaPlaces = [
     zipcode: 67890,
     acceptsReservations: false,
   },
-  {
-    name: "Pizza Hut",
+  "Pizza Hut": {
     cuisines: ["italian", "american", "pizza"],
     pizzaToppings: {
       pepperoni: 2.0,
@@ -50,8 +47,7 @@ export const pizzaPlaces = [
     zipcode: 11235,
     acceptsReservations: true,
   },
-  {
-    name: "California Pizza Kitchen",
+  "California Pizza Kitchen": {
     cuisines: ["californian", "pizza"],
     pizzaToppings: {
       pepperoni: 1.9,
@@ -67,9 +63,8 @@ export const pizzaPlaces = [
     zipcode: 98765,
     acceptsReservations: true,
   },
-  {
-    name: "Marco's Pizza",
-    cuisines: ["italian", "american", "pizza"],
+  "Marco's Pizza": {
+    cuisines: ["italian", "chicago", "pizza"],
     pizzaToppings: {
       pepperoni: 2.1,
       greenOlives: 0.6,
@@ -84,6 +79,4 @@ export const pizzaPlaces = [
     zipcode: 12345,
     acceptsReservations: false,
   },
-];
-
-console.log(pizzaPlaces);
+};
