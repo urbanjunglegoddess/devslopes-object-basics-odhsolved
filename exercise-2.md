@@ -4,9 +4,9 @@ Object Methods
 
 Now that we can write, store, and modify objects, let's look at methods. Methods are functions that are stored on objects. We can create our own methods on objects, but JavaScript provides us with built-in methods that are commonly used. 
 
-[1] Look over the provided restaraunt object. Identify its keys and verify which data type is stored for each value. 
+[1] Look over the provided restaurant object. Identify its keys and verify which data type is stored for each value. 
 
-This object does something different from our last restaraunt object. It has a pizzaToppings key that stores an object pizza topping keys and price values. 
+This object does something different from our last restaurant object. It has a pizzaToppings key that stores an object pizza topping keys and price values. 
 
 [2] Write a function, grabCategories, that accepts an object and returns an array of all the keys it contains. 
 
@@ -31,7 +31,7 @@ Run this function and pass in pizza toppings. Make sure the ad changes and displ
 
 [Bonus] Refactor this function so it can handle any changes in address or slogan. 
 
-Without adjust the original papaJohns object, update the slogan and address to anything you choose. 
+Without adjusting the original papaJohns object, update the slogan and address to anything you choose. 
 
 Run your refactored method and ensure the new address and slogan are printed in the ad! 
 

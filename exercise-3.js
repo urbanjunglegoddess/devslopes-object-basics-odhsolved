@@ -1,77 +1,61 @@
-const pizzaPlacesObject = require("./pizzaPlaces");
+const dominos = {
+  name: "Domino's",
+  cuisines: ["italian", "new york", "pizza"],
+  pizzaToppings: {
+    pepperoni: 2.2,
+    mushrooms: 0.7,
+    extraCheese: 1.4,
+    onions: 0.5,
+    sausage: 2.8,
+    extraSauce: 0.8,
+  },
+  starReviews: {
+    Peach: 3,
+    Yoshi: 2.1,
+    Bowser: 4,
+    Mario: 5,
+    Luigi: 5,
+    Gumba564: 3.4,
+    "Donkey Kong": 3.2,
+  },
+  favorited: true,
+  address: "123 Elm Street",
+  zipcode: 54321,
+  acceptsReservations: true,
+};
 
-/*
-Exercise Three: Looping with Objects! 
-*/
-
-function getFavoritePlaces(pizzaPlaces) {
-  const favePlaces = [];
-
-  for (pizzaPlace in pizzaPlaces) {
-    const current = pizzaPlaces[pizzaPlace];
-    if (current.favorited) {
-      favePlaces.push(pizzaPlace);
-    }
+function printPizza(pizzaPlace) {
+  for (let key in dominos) {
+    console.log(key, dominos[key]);
   }
-  return favePlaces;
 }
 
-// console.log(getFavoritePlaces(pizzaPlaceObject));
+// printPizza(dominos);
 
-function cheapestTopping(pizzaPlaces, topping) {
-  let cheapestPlace = null;
-  let cheapestPrice = Infinity;
-
-  for (const [placeName, placeDetails] of Object.entries(pizzaPlaces)) {
-    const currentPrice = placeDetails.pizzaToppings[topping];
-
-    if (currentPrice !== undefined && currentPrice < cheapestPrice) {
-      cheapestPlace = placeName;
-      cheapestPrice = currentPrice;
+function toppingsPriceRange(pizzaPlace) {
+  const { pizzaToppings } = pizzaPlace;
+  let highest = -Infinity;
+  let lowest = Infinity;
+  for (let key in pizzaToppings) {
+    if (pizzaToppings[key] > highest) {
+      highest = pizzaToppings[key];
+    } else if (pizzaToppings[key] < lowest) {
+      lowest = pizzaToppings[key];
     }
   }
-
-  return cheapestPlace;
+  return [highest, lowest];
 }
 
-// console.log(cheapestTopping(pizzaPlacesObject, "pepperoni"));
+// console.log(toppingsPriceRange(dominos));
 
-function averageStarRating(pizzaPlaces) {
-  let totalStars = 0;
-  let numberOfPlaces = 0;
-
-  for (const placeName in pizzaPlaces) {
-    if (pizzaPlaces[placeName]) {
-      totalStars += pizzaPlaces[placeName].numberOfStars;
-      numberOfPlaces++;
-    }
+function calcAverage(pizzaPlace) {
+  const { starReviews } = pizzaPlace;
+  let sum = 0;
+  let count = Object.keys(starReviews).length;
+  for (let key in starReviews) {
+    sum += starReviews[key];
   }
-
-  return (totalStars / numberOfPlaces).toFixed(1);
+  return (sum / count).toFixed(2);
 }
 
-// console.log(averageStarRating(pizzaPlacesObject));
-
-function getMostCommonCuisine(pizzaPlaces) {
-  const cuisineCounts = {};
-
-  for (const placeDetails of Object.values(pizzaPlaces)) {
-    for (const cuisine of placeDetails.cuisines) {
-      cuisineCounts[cuisine] = (cuisineCounts[cuisine] || 0) + 1;
-    }
-  }
-
-  let mostCommonCuisine = null;
-  let maxCount = 0;
-
-  for (const [cuisine, count] of Object.entries(cuisineCounts)) {
-    if (count > maxCount) {
-      mostCommonCuisine = cuisine;
-      maxCount = count;
-    }
-  }
-
-  return mostCommonCuisine;
-}
-
-// console.log(getMostCommonCuisine(pizzaPlacesObject));
+// console.log(calcAverage(dominos));

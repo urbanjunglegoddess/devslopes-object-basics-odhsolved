@@ -2,7 +2,7 @@ EXERCISE ONE:
 
 Object Syntax & Notation 
 
-Now that you understand how to write objects and access their properties using dot and bracket notation let's build an object that represents the address of your favorite restaurant! Imagine this object will be used in an application that allows us to make restaurant recommendations for our users. 
+Now that you understand how to write objects and access their properties using dot and bracket notation, let's build an object that represents the address of your favorite restaurant! Imagine this object will be used in an application that allows us to make restaurant recommendations for our users. 
 
 [1] Declare a const and label it the name of your favorite restaurant. 
 
