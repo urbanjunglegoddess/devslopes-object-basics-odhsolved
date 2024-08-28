@@ -1,7 +1,8 @@
-// What are objects?
-// Data Types in JS
-// Composite Data Type: contains other data types
-// Stores Data in Key : Value pairs
+// Module 1: What are Objects?
+
+// Objects are data types in JS 
+// They are composite data types: they can store other data types
+// Objects store data in key : value pairs
 
 // How do we write objects?
 
